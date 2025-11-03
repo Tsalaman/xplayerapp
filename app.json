@@ -1,0 +1,91 @@
+{
+  "expo": {
+    "name": "XPlayer",
+    "slug": "xplayer",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1A2F4D"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.xplayer.app",
+      "buildNumber": "1.0.0",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "useNextNotificationsApi": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "We need access to your photo library to set your profile picture.",
+        "NSLocationWhenInUseUsageDescription": "Χρησιμοποιούμε την τοποθεσία σου για να βρούμε παίκτες κοντά σου.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Χρειάζεται για λειτουργίες που απαιτούν συνεχή τοποθεσία."
+      },
+      "useFrameworks": "static"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1A2F4D"
+      },
+      "package": "com.xplayer.app",
+      "versionCode": 1,
+      "googleServicesFile": "./google-services.json",
+      "useNextNotificationsApi": true,
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "NOTIFICATIONS"
+      ],
+      "notification": {
+        "icon": "./assets/notification-icon.png",
+        "color": "#5CE1E6",
+        "sound": true
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "xplayer",
+              "host": "invite"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#5CE1E6",
+          "sounds": ["./assets/notification-sound.wav"]
+        }
+      ]
+    ],
+    "scheme": "xplayer",
+    "extra": {
+      "eas": {
+        "projectId": "your-eas-project-id"
+      },
+      "firebase": {
+        "senderId": "473699043329"
+      }
+    }
+  }
+}

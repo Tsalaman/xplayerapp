@@ -1,0 +1,28 @@
+import { useEffect, useRef } from 'react';
+
+/**
+ * Run a function at a specified interval
+ * @param callback Function to call
+ * @param delay Delay in milliseconds (null to pause)
+ */
+export function useInterval(callback: () => void, delay: number | null) {
+  const savedCallback = useRef<() => void>();
+
+  useEffect(() => {
+    savedCallback.current = callback;
+  }, [callback]);
+
+  useEffect(() => {
+    if (delay === null) return;
+
+    const tick = () => {
+      if (savedCallback.current) {
+        savedCallback.current();
+      }
+    };
+
+    const id = setInterval(tick, delay);
+    return () => clearInterval(id);
+  }, [delay]);
+}
+

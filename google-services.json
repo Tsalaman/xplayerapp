@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "473699043329",
+    "project_id": "xplayer-prod",
+    "storage_bucket": "xplayer-prod.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473699043329:android:5156b861671f7550e01800",
+        "android_client_info": {
+          "package_name": "com.xplayer.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAowfCGZGmd16Dj9wKLZseJpbs5WhKA80Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
+
